@@ -1,5 +1,5 @@
 package com.r177219015.q1;
-
+//first  changes 
 import java.util.Scanner;
 
 public class DigitsCombination {
@@ -28,3 +28,4 @@ public class DigitsCombination {
 
     }
 }
+//second changes
