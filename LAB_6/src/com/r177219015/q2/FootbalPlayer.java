@@ -1,4 +1,4 @@
-package com.r177219015.q3;
+package com.r177219015.q2;
 
 public class FootbalPlayer extends Player{
    public void football(String name,int age){

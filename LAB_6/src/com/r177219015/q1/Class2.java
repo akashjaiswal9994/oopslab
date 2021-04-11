@@ -1,5 +1,4 @@
-package com.r177219015.q2;
-import com.r177219015.q1.Class1;
+package com.r177219015.q1;
 
 class Class2 extends Class1 {
 
