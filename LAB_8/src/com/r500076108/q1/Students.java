@@ -10,13 +10,13 @@ public class Students {
        try {
 
 
-           for (int i = 0; i < 10; i++) {
+           for (int i = 0; i < 2; i++) {
                System.out.print("enter Student "+i+" name = ");
                name[i] = sc.next();
                System.out.print("Enter "+name[i]+" Roll no = ");
                rollNo[i] = sc.nextInt();
            }
-           for (int j = 0; j < 10; j++) {
+           for (int j = 0; j < 11; j++) {
                System.out.println("Students Name = " + name[j]);
                System.out.println("Roll No = " + rollNo[j]);
            }
