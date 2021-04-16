@@ -8,7 +8,7 @@ public class CheckName {
     public static  void main(String args[]){
         int count=0;
         List<Integer> list=new ArrayList<>();
-        String name=new String("priyal");
+        String name=new String("akash");
         int nameLength=name.length();
 
         for(int i=0;i<nameLength;i++) {
