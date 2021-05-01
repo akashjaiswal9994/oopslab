@@ -5,8 +5,6 @@ public class TestClass {
     ThreadSample t1= new ThreadSample();
     ThreadSample t2=new ThreadSample();
     ThreadSample t3=new ThreadSample();
-t3.setPriority(Thread.MAX_PRIORITY);
-
     t1.start();
     t2.start();
     t3.start();
@@ -18,4 +16,10 @@ RunnableSample2 r2=new RunnableSample2();
     tt1.start();
     tt2.start();
     }
+    Thread t5=new Thread(new Runnable() {
+        @Override
+        public void run() {
+
+        }
+    });
 }

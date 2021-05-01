@@ -6,8 +6,8 @@ public class ThreadSample extends Thread{
         for(int i=0;i<5;i++) {
 
             try {
-                sleep(800);
-                System.out.println(i);
+                Thread.currentThread().sleep(800);
+                System.out.print(i);
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
