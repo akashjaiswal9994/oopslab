@@ -19,14 +19,13 @@ public class MergeSorting {
         int i=l,j=mid+1,k=l;
         while(i<=mid && j<=h){
             if(tempArray[i]<tempArray[j]){
-                array[k]=tempArray[i];
-                i++;
+                array[k++]=tempArray[i++];
             }
             else {
                 array[k++]=tempArray[j++];
-                j++;
+
             }
-            k++;
+
 
         }
         while(i<=mid){
