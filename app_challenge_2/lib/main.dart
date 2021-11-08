@@ -76,7 +76,8 @@ class MyApp extends StatelessWidget {
                 child: Text('See other details'),
                   onPressed:(){
                   Navigator.push(context, MaterialPageRoute(builder: (context)=>SecondScreen()));
-                  },),
+                  },
+              ),
 
             ],
           ),

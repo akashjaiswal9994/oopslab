@@ -10,7 +10,7 @@ public class HashSetSample {
         StudentData studentData1 =new StudentData(15,"Akash");
         StudentData studentData2 =new StudentData(16,"Raman");
         StudentData studentData3 =new StudentData(17,"rohit");
-        StudentData studentData4 =new StudentData(18,"Priyal");
+        StudentData studentData4 =new StudentData(18,"love");
         StudentData studentData5 =new StudentData(19,"Om");
         HashSet hs =new HashSet();
         hs.add(studentData1);

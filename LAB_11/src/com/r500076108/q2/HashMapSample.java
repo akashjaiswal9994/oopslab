@@ -10,6 +10,8 @@ public class HashMapSample {
         hashMap.put("c",12);
         hashMap.put("d",13);
         hashMap.put("e",14);
+
+        hashMap.get("b");
         if(hashMap.containsKey("ww")){
             System.out.println("Key found ");
         }

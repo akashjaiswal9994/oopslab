@@ -25,7 +25,7 @@ public class CheckName {
         }
         System.out.println("number of time 'a' is present in name  "+count);
         for(Integer j:list){
-            System.out.println("'a ' is present at following location  = "+(j+1));
+            System.out.println("'a ' is present at location  = "+(j+1));
         }
     }
 }
