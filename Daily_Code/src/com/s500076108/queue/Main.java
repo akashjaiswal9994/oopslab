@@ -10,9 +10,10 @@ public class Main {
     priorityQueue.add(7);
     priorityQueue.add(6);
     priorityQueue.add(5);
-    while (!priorityQueue.isEmpty()){
-        System.out.println(priorityQueue.remove());
-    }
+        System.out.println(priorityQueue);
+//    while (!priorityQueue.isEmpty()){
+//        System.out.println(priorityQueue.remove());
+//    }
 
     }
 }
