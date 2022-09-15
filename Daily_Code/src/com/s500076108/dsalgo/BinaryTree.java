@@ -1,6 +1,6 @@
 package com.s500076108.dsalgo;
 
-import java.util.Scanner;
+import java.util.*;
 
 public class BinaryTree {
     int value;
@@ -11,7 +11,12 @@ public class BinaryTree {
     public String toString(){
         return "value= "+value;
     }
+
     public static void insert(int x) {
+        List<Integer> ls = new ArrayList<Integer>();
+        Set<Integer> si=new HashSet<Integer>();
+        
+        si.add(x);
         BinaryTree node = new BinaryTree();
         node.value = x;
         if (root == null) {

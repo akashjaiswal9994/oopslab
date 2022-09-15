@@ -9,7 +9,7 @@ public class BinaryTreeRecursionMethod {
     public static void main(String args[]){
         sc=new Scanner(System.in);
         //List<Integer> list=new ArrayList<>();
-    createTree();
+         createTree();
     }
     public static Node createTree(){
         Node root=null;

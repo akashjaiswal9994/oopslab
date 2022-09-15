@@ -1,5 +1,7 @@
 package com.s500076108.sorting;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Random;
 
 public class QuickSortPractise {
@@ -9,6 +11,7 @@ public class QuickSortPractise {
         }
     }
     public static void main(String args[]){
+
         Random random =new Random();
         int[] number=new int[10];
         int size=number.length;
