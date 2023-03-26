@@ -25,15 +25,21 @@ public class Students{
         }
         
     }
+     static void hello(){
+        System.out.println("hello moon hehehe");
+    }
 
     public static void main(String[] args){
-      Scanner sc = new Scanner(System.in);
-      int [] marks=new int[10];
-      for(int i=0;i<10;i++) {
-          System.out.print("Enter Marks Of Student "+ (i+1)+ ": ");
-          marks[i]= sc.nextInt();
-        }
+//      Scanner sc = new Scanner(System.in);
+//      int [] marks=new int[10];
+//      for(int i=0;i<10;i++) {
+//          System.out.print("Enter Marks Of Student "+ (i+1)+ ": ");
+//          marks[i]= sc.nextInt();
+//        }
 
-        getMarks(marks);
+        //getMarks(marks);
+
+        hello();
+
     }
 }

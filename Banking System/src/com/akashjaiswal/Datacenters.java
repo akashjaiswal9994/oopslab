@@ -9,7 +9,7 @@ public class Datacenters extends UserData{
         Scanner sc =new Scanner(System.in);
         String url="jdbc:mysql://127.0.0.1:3306/BankingSystem";
         String username="root";
-        String password="9793946313";
+        String password="root";
 
         Class.forName("com.mysql.jdbc.Driver");
      //   String query="create table UserDetails(Userid BIGINT Primary key,Uname varchar(20),Amount float,Withdraw float,Deposit float )";
