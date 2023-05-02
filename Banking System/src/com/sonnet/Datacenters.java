@@ -1,4 +1,4 @@
-package com.akashjaiswal;
+package com.sonnet;
 
 import java.sql.*;
 import java.util.Scanner;
@@ -11,7 +11,7 @@ public class Datacenters extends UserData{
         String username="root";
         String password="root";
 
-        Class.forName("com.mysql.jdbc.Driver");
+        Class.forName("com.mysql.cj.jdbc.Driver");
      //   String query="create table UserDetails(Userid BIGINT Primary key,Uname varchar(20),Amount float,Withdraw float,Deposit float )";
         String insertQuery="insert into UserDetails Values( ?,?,?,?,?)";
         String updateAmount= "UPDATE userDetails set Amount=Deposit where Userid=?";
@@ -25,7 +25,7 @@ public class Datacenters extends UserData{
         PreparedStatement p1;
         PreparedStatement p2;
 //        int rs=st.executeUpdate(query);
-          int row2;
+
 //        System.out.println(rs);
         int select,select1;
         do {
@@ -53,7 +53,8 @@ public class Datacenters extends UserData{
                     int rowAmount=p2.executeUpdate();
                     break;
                 case 2:
-                    long getSapId;
+                    boolean flag=false;
+                    final long getSapId;
                     System.out.print("\n");
                     System.out.println("******************* Login into account ********************");
                     System.out.print("Enter User ID (sap id): ");
@@ -61,6 +62,8 @@ public class Datacenters extends UserData{
                     ResultSet rs=st.executeQuery("select Userid from userDetails");
                     while(rs.next()){
                         if(rs.getLong(1)==getSapId){
+                            flag=true;
+
                             do {
                                 System.out.println("==========================================================");
                                 System.out.println("Check Balance         - press 1");
@@ -76,7 +79,7 @@ public class Datacenters extends UserData{
                                         System.out.println("########################################################");
                                         System.out.println("User name          Amount ");
                                         while (checkAm.next()){
-                                           System.out.println(checkAm.getString("Uname")+"         "+checkAm.getString("Amount"));
+                                            System.out.println(checkAm.getString("Uname")+"         "+checkAm.getString("Amount"));
                                         }
                                         System.out.println("########################################################");
                                         System.out.println();
@@ -86,13 +89,13 @@ public class Datacenters extends UserData{
                                         System.out.println("Enter the amount to be withdraw");
                                         withdrawAmount=sc.nextFloat();
                                         ResultSet wA=st1.executeQuery("select Amount from userDetails where Userid ="+getSapId);
-                                               wA.next();
-                                              if (wA.getFloat("Amount") > 0) {
-                                                  int wa = st1.executeUpdate("UPDATE userDetails set Amount=Amount"+ - + withdrawAmount + "where Userid=" + getSapId);
-                                                  System.out.println("Amount " + withdrawAmount + " Withdraw Successful ");
-                                              } else {
-                                                  System.out.println("your Account balance is Zero. Kindly Deposit some amount ");
-                                              }
+                                        wA.next();
+                                        if (wA.getFloat("Amount") > 0) {
+                                            int wa = st1.executeUpdate("UPDATE userDetails set Amount=Amount"+ - + withdrawAmount + "where Userid=" + getSapId);
+                                            System.out.println("Amount " + withdrawAmount + " Withdraw Successful ");
+                                        } else {
+                                            System.out.println("your Account balance is Zero. Kindly Deposit some amount ");
+                                        }
 
 
 
@@ -103,8 +106,8 @@ public class Datacenters extends UserData{
                                         depositAmount=sc.nextFloat();
                                         ResultSet dA=st2.executeQuery("select Amount from userDetails where Userid ="+getSapId);
 
-                                                int da = st2.executeUpdate("UPDATE userDetails set Amount=Amount +" + depositAmount + "where Userid=" + getSapId);
-                                                System.out.println("Amount " + depositAmount + " Deposit Successful ");
+                                        int da = st2.executeUpdate("UPDATE userDetails set Amount=Amount +" + depositAmount + "where Userid=" + getSapId);
+                                        System.out.println("Amount " + depositAmount + " Deposit Successful ");
 
 
                                         break;
@@ -115,10 +118,12 @@ public class Datacenters extends UserData{
                                 }
 
                             }while (select1!=4);
+
                         }
-                        else {
-                            System.out.println("Invalid user id kindly recheck the id or user may not be register.");
-                        }
+
+                    }
+                    if (flag==false){
+                        System.out.println("Invalid user id kindly recheck the id or user may not be register.");
                     }
                     break;
                 case 3:
@@ -134,8 +139,5 @@ public class Datacenters extends UserData{
 //        st2.close();
         st.close();
         connection.close();
-
-
-
     }
 }

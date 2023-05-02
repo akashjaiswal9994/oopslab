@@ -1,4 +1,4 @@
-package com.akashjaiswal;
+package com.sonnet;
 
 import java.util.Scanner;
 
@@ -12,6 +12,7 @@ public class UserData {
     }
 
     public void setUserId(Long userId) {
+
         this.userId = userId;
     }
 
